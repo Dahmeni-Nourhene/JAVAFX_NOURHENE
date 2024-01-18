@@ -1,0 +1,15 @@
+/* dialogStyles.css */
+
+.text-input-dialog .dialog-pane {
+    -fx-background-color: #ffffff; /* Couleur de fond */
+}
+
+.text-input-dialog .header-panel {
+    -fx-background-color: #c71ecd; /* Couleur de l'en-tête */
+    -fx-text-fill: white; /* Couleur du texte de l'en-tête */
+}
+
+.text-input-dialog .text-input {
+    -fx-background-color: #f5f5f5; /* Couleur de fond de la zone de texte */
+    -fx-border-color: #c71ecd; /* Couleur de la bordure de la zone de texte */
+}

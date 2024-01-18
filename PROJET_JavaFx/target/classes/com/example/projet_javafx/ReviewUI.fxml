@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="758.0" prefWidth="842.0" stylesheets="@utils/manage-restaurants.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_javafx.Controllers.ReviewController">
+    <children>
+
+        <AnchorPane layoutX="218.0" layoutY="57.0" prefHeight="690.0" prefWidth="598.0" stylesheets="@utils/manage-restaurants.css">
+            <children>
+                <TableView fx:id="reviewTableView" layoutY="349.0" prefHeight="327.0" prefWidth="598.0" stylesheets="@utils/table-style.css">
+                    <columns>
+                        <TableColumn fx:id="userIdColumn" prefWidth="40.79998779296875" text="User ID" />
+                        <TableColumn fx:id="restaurantIdColumn" prefWidth="120.0" text="Restaurant ID" />
+                        <TableColumn fx:id="noteColumn" prefWidth="55.199951171875" text="Note" />
+                        <TableColumn fx:id="commentaireColumn" maxWidth="500.0" prefWidth="152.0" text="Commentaire" />
+                        <TableColumn fx:id="operationsColumn" prefWidth="92.800048828125" text="Opérations" />
+                    </columns>
+                </TableView>
+                <VBox layoutX="57.0" layoutY="83.0" prefHeight="232.0" prefWidth="468.0">
+                    <children>
+                        <Label text="User ID" />
+                        <TextField fx:id="userIdTextField" />
+
+                        <Label text="Restaurant ID" />
+                        <TextField fx:id="restaurantIdTextField" />
+
+                        <Label text="Note" />
+                        <TextField fx:id="noteTextField" />
+
+                        <Label text="Commentaire" />
+                        <TextField fx:id="commentaireTextField" />
+
+                        <HBox prefHeight="60.0" prefWidth="431.0">
+                            <children>
+                                <Button onAction="#handleAddReview" prefHeight="40.0" prefWidth="178.0" styleClass="save_button" text="Add Review" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="35.0" />
+                                    </HBox.margin>
+                                </Button>
+
+                                <Button onAction="#handleUpdateReview" prefHeight="40.0" prefWidth="178.0" styleClass="update_button" text="Update Review" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="30.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </VBox>
+                <Text fill="#686868" layoutX="14.0" layoutY="42.0" styleClass="main_title" text="Reviews">
+                    <font>
+                        <Font name="Trebuchet MS" size="30.0" />
+                    </font>
+                </Text>
+                <Text layoutX="14.0" layoutY="64.0" text="Manager" wrappingWidth="201.92578125">
+                    <font>
+                        <Font name="Trebuchet MS" size="15.0" />
+                    </font>
+                </Text>
+                <Text fill="#686868" layoutX="74.0" layoutY="65.0" text="/ Manage Reviews">
+                    <font>
+                        <Font name="Trebuchet MS" size="15.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+
+        <!-- sidebar -->
+        <VBox layoutY="57.0" prefHeight="706.0" prefWidth="202.0" styleClass="side-bar">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleManageReviewsButtonAction" prefHeight="39.0" prefWidth="211.0" styleClass="side-bar-button" text="★  Manage Reviews">
+                    <font>
+                        <Font name="Agency FB Bold" size="15.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#handleEvaluateReviewsButtonAction" prefHeight="39.0" prefWidth="211.0" styleClass="side-bar-button" text="★  Evaluate Reviews">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#handleManageReservationsButtonAction" prefHeight="39.0" prefWidth="211.0" styleClass="side-bar-button" text="★  Manage Reservations">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin>
+                </Button>
+                <PointLight color="CHARTREUSE" lightOn="true" />
+            </children>
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+        </VBox>
+
+        <!-- /sidebar -->
+        <HBox layoutX="-5.0" prefHeight="60.0" prefWidth="848.0" styleClass="nav-bar">
+            <children>
+                <ImageView fitHeight="54.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@utils/foodiefinder-high-resolution-logo-white-transparent.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="17.0" top="7.0" />
+                    </HBox.margin>
+                </ImageView>
+            </children>
+            <padding>
+                <Insets bottom="10.0" top="5.0" />
+            </padding></HBox>
+    </children>
+</AnchorPane>
